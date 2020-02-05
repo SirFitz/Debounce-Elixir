@@ -20,6 +20,14 @@ be found at [https://hexdocs.pm/debounce-elixir](https://hexdocs.pm/debounce-eli
 
 ## Use
 
+Your configuration will need to know your api key, and any other options eg. photo.
+
+```elixir
+# config/config.exs
+config :debounce_elixir,
+  api: "5e3a00181ca94",
+  photo: true
+```
 
 Verify an email address
 

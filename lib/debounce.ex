@@ -43,7 +43,7 @@ defmodule Debounce do
   """
   def verify(email_address, response_type) when is_bitstring(email_address) do
     query =
-      :debounce
+      :debounce_elixir
       |> Application.get_all_env()
       |> Enum.into(%{})
       |> Map.put(:email, email_address)
