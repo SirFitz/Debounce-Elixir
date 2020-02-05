@@ -16,7 +16,7 @@ end
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/debounce-elixir](https://hexdocs.pm/debounce-elixir).
+be found at [https://hexdocs.pm/debounce_elixir](https://hexdocs.pm/debounce_elixir).
 
 ## Use
 
@@ -25,7 +25,7 @@ Your configuration will need to know your api key, and any other options eg. pho
 ```elixir
 # config/config.exs
 config :debounce_elixir,
-  api: "5e3a00181ca94",
+  api: "<API_KEY>",
   photo: true
 ```
 
