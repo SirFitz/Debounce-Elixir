@@ -3,7 +3,7 @@ defmodule Debounce.MixProject do
 
   def project do
     [
-      app: :debouncer,
+      app: :debounce_elixir,
       version: "0.1.0",
       elixir: "~> 1.9",
       name: "Debounce",
