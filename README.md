@@ -9,7 +9,7 @@ by adding `debounce_elixir` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:debounce_elixir, "~> 0.1.0"}
+    {:debounce_elixir, "~> 0.1.1"}
   ]
 end
 ```
@@ -32,6 +32,11 @@ config :debounce_elixir,
 Verify an email address
 
 ```elixir
-Debounce.verify("info@example.com")
-{:ok, "unknown", "info@example.com"}
+Debounce.verify("googolplex@yahoo.com")
+{:ok,
+ %{
+   "photo" => "https://cdn.debounce.io/j3qPRRUBgdrRz9TyNyyZh2ilfAB-EztFQY_Y0g5w_hTb2BvmWOGlroUuj9czIq-Xi51D_Z_RqtUlxCw76Rz4bYYdAPqziTsytZKiV6_gRWQ0y5Rlqstp0r6V3m_hJTYx6WHpKMnceGbIakF71mC505A1ROdZTNgEvLR85rTy--Fvllc1f3QGl0VfLBThqAqixILrBqKZAZNGD5xporjVLg==",
+   "status" => "safe",
+   "suggestion" => ""
+ }, "googleplex@yahoo.com"}
 ```

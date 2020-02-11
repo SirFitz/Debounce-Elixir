@@ -4,7 +4,7 @@ defmodule Debounce.MixProject do
   def project do
     [
       app: :debounce_elixir,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.9",
       name: "Debounce",
       description: "Debounce Email Validator API Wrapper.",
