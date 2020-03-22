@@ -44,8 +44,13 @@ defmodule Debounce do
          "success" => "1"
        }, "info@example.com"}
 
-       iex> Debounce.verify("info@example.com", :minimal)
-       {:ok, "unknown", "info@example.com"}
+       iex> Debounce.verify("googolplex@yahoo.com")
+       {:ok,
+        %{
+          "photo" => "https://cdn.debounce.io/j3qPRRUBgdrRz9TyNyyZh2ilfAB-EztFQY_Y0g5w_hTb2BvmWOGlroUuj9czIq-Xi51D_Z_RqtUlxCw76Rz4bYYdAPqziTsytZKiV6_gRWQ0y5Rlqstp0r6V3m_hJTYx6WHpKMnceGbIakF71mC505A1ROdZTNgEvLR85rTy--Fvllc1f3QGl0VfLBThqAqixILrBqKZAZNGD5xporjVLg==",
+          "status" => "safe",
+          "suggestion" => ""
+        }, "googleplex@yahoo.com"}
 
   """
   def verify(email_address, response_type) when is_bitstring(email_address) do
@@ -80,7 +85,7 @@ defmodule Debounce do
     end
   end
 
-  def statuses, do: ["safe", "bounce", "trap", "temp", "catch_all", "unknown", "invalid_check", "failed_check"]
+  def statuses, do: ["safe", "bounce", "trap", "invalid", "temp", "catch_all", "unknown", "invalid_check", "failed_check"]
   defp resolve_minimal(json) do
     new_json = Map.new
      |> Map.put("status", resolve_code(json["debounce"]["code"]))
